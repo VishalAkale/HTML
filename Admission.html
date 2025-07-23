@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admission Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Student Admission Form</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admission.html">Apply</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="success.html" method="get" class="admission-form">
+      <label>Full Name:
+        <input type="text" name="name" required />
+      </label>
+
+      <label>Email:
+        <input type="email" name="email" required />
+      </label>
+
+      <label>Date of Birth:
+        <input type="date" name="dob" required />
+      </label>
+
+      <label>Course Applying For:
+        <select name="course" required>
+          <option value="">Select</option>
+          <option value="Master of Computer Applications">Master of Computer Applications</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+        </select>
+      </label>
+
+      <label>Upload Documents:
+        <input type="file" name="documents" />
+      </label>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Trinity Academy of Engineering. All Rights Reserved</p>
+  </footer>
+</body>
+</html>
