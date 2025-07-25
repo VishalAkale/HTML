@@ -1,0 +1,234 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e9f0ea; /* soft light green background */
+  color: #2e2e2e;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #2a9d8f; /* teal */
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(42, 157, 143, 0.5);
+  user-select: none;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 8px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+}
+
+nav a {
+  color: #f4c24b; /* vibrant mustard */
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: color 0.35s ease, transform 0.2s ease;
+  padding: 6px 0;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f4c24b; /* mustard */
+  transition: width 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #e6b345; /* darker mustard */
+  transform: translateY(-3px);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* Main container */
+main {
+  flex: 1;
+  max-width: 720px;
+  margin: 30px auto 80px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(42, 157, 143, 0.15);
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Sections */
+.intro,
+.thank-you {
+  padding: 40px 30px;
+  background-color: #f7faf7;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  color: #2a9d8f; /* teal */
+  font-weight: 600;
+  box-shadow: inset 0 0 10px #d1e9db;
+}
+
+/* Headings inside main */
+.intro h2,
+.thank-you h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1f6f5c;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphs */
+.intro p,
+.thank-you p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.button,
+.admission-form button {
+  display: inline-block;
+  background: #f4c24b; /* mustard */
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(244, 194, 75, 0.5);
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.25s ease;
+  user-select: none;
+}
+
+.button:hover,
+.button:focus,
+.admission-form button:hover,
+.admission-form button:focus {
+  background: #e6b345; /* darker mustard */
+  box-shadow: 0 12px 30px rgba(230, 179, 69, 0.75);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+/* Admission Form */
+.admission-form {
+  background-color: #fefefe;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(42, 157, 143, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.admission-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f6f5c;
+  font-size: 1rem;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #a0d3c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus {
+  border-color: #2a9d8f;
+  outline: none;
+  box-shadow: 0 0 8px #8bd3bf;
+}
+
+/* Footer */
+footer {
+  background-color: #2a9d8f; /* teal */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 -3px 6px rgba(42, 157, 143, 0.5);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  main {
+    margin: 20px 15px 100px;
+    padding: 15px;
+  }
+  
+  .intro,
+  .thank-you {
+    padding: 30px 15px;
+    font-size: 1rem;
+  }
+  
+  .admission-form {
+    padding: 25px 15px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+
+  .button,
+  .admission-form button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
